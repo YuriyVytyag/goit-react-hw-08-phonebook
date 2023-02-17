@@ -89,7 +89,9 @@ export const PhoneBookForm = ({ checkDuplicate }) => {
             )}
           />
         </LabelStyle>
-        <Btn type="submit">Add Contact</Btn>
+        <Btn type="submit">
+          <p>Add Contact</p>
+        </Btn>
       </FormWrapper>
     </Formik>
   );

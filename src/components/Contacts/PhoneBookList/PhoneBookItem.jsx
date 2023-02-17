@@ -1,4 +1,4 @@
-import { Item } from './PhoneBookList.styled';
+import { Item, Btn } from './PhoneBookList.styled';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operations';
 export const PhoneBookItem = ({ name, number, id }) => {
@@ -8,7 +8,7 @@ export const PhoneBookItem = ({ name, number, id }) => {
     <Item>
       <span>{name}:</span>
       <span>{number}</span>
-      <button onClick={() => dispatch(deleteContact(id))}>Delete</button>
+      <Btn onClick={() => dispatch(deleteContact(id))}>Delete</Btn>
     </Item>
   );
 };

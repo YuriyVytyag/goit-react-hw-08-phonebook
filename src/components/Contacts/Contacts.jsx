@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getContactsFilter, getContacts } from 'redux/selector';
 import { fetchContacts } from 'redux/operations';
 import { useEffect } from 'react';
+import { Wrapper } from './Contacts.styled';
 
 export function Contacts() {
   const dispatch = useDispatch();
@@ -27,12 +28,12 @@ export function Contacts() {
   };
 
   return (
-    <div>
+    <Wrapper>
       <h2>Phonebook</h2>
       <PhoneBookForm checkDuplicate={checkDuplicate} />
       <h2>Contacts</h2>
       <Filter />
       {contacts && <PhoneBookList contactList={filterContacts()} />}
-    </div>
+    </Wrapper>
   );
 }
